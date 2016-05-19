@@ -1,6 +1,3 @@
-
-
-
 .dash-unit {
     margin-bottom: 5% !important;
     padding-bottom: 5% !important;
@@ -10,4 +7,11 @@
 #register-info {
     height: 506px !important;
     margin-top: 0px !important;
+}
+
+
+
+
+#myText {
+    text-align: center;
 }

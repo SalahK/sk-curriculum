@@ -9,7 +9,7 @@
                
                 <div class="cont2">
                     <div class="thumbnail">
-                        <img src="assets/img/face.jpg" alt="Marcel Newman" class="img-circle">
+                        <img src="" alt="{{i.name}}" class="img-circle">
                     </div><!-- /thumbnail -->
                     <h2>{{i.name}}</h2>
                 </div>
@@ -35,7 +35,7 @@
 
     </div>
         
-      <!-- DONUT CHART BLOCK -->
+      <!-- Formations -->
         <div ng-repeat="f in fmt">
             <div class="col-sm-6 col-lg-4">
                 <div class="dash-unit">
@@ -43,9 +43,9 @@
                     <hr>
                     <h2>{{f.titre}}</h2>
                     <hr>
-                    <span ng-repeat="desc in f.desc">
-                        {{desc}}<br>
-                    </span>
+                    <div id="myText" ng-repeat="desc in f.desc">
+                        <span>{{desc}}</span><br>
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
 
 <div class="row">
 
-	  <!-- TO DO LIST -->     
+	  <!-- Expériences -->     
       		<div ng-repeat="xp in exp">
                 <div class="col-sm-4 col-lg-4">
                     <div class="dash-unit">
@@ -69,6 +69,5 @@
                     </div>
                 </div>
       		</div>
-      	</div>
 
 </div>
