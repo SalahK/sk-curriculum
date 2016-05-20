@@ -15,6 +15,9 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link href="assets/css/flexslider.css" rel="stylesheet">
 
+        <!-- angular material -->
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+        
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 
         <style type="text/css">
@@ -69,13 +72,15 @@
         <!-- Google Fonts call. Font Used Open Sans & Raleway -->
         <link href="http://fonts.googleapis.com/css?family=Raleway:400,300" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+        
+        
 	</head>
   <body ng-controller="cvCtrl">
 
-  	<!-- NAVIGATION MENU -->
+  	<!-- NAVIGATION MENU 
 
     <div class="navbar-nav navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
@@ -88,12 +93,12 @@
             <ul class="nav navbar-nav">
               <li><a href="#formations"><i class="icon-home icon-white"></i> Home</a></li>
             </ul>
-          </div><!--/.nav-collapse -->
+          </div><!--/.nav-collapse
         </div>
-    </div>
+    </div> -->
 
-    <div class="container">
-        <div ng-view></div>
+    <div>
+        <div id="view" ng-view></div>
     </div>
 
 	<div id="footerwrap">
@@ -102,7 +107,7 @@
       		<div class="row">
       			<div class="col-sm-12 col-lg-12">
                 <p>Il était une Com...
-      			<a href="www.iletaitune.com"><img src="assets/img/ieuc3.png" alt="Il était une com..."></a>
+      			<a href="http://www.iletaitune.com"><img src="assets/img/ieuc3.png" alt="Il était une com..."></a>
       			Copyright 2015</p>
       			</div>
 
@@ -123,7 +128,14 @@
     <!-- angular lib -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.min.js"></script>
-    
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>  
+
+
  
     <!-- //////////// -->
     <!-- my app -->

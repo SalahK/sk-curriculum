@@ -5,13 +5,26 @@
 }
 
 #register-info {
-    height: 506px !important;
+    height: 506; !important;
     margin-top: 0px !important;
 }
-
-
-
 
 #myText {
     text-align: center;
 }
+
+.thumbnail img{
+    max-width: 20% !important;
+}
+#view {
+    background-color: #262626 !important;
+}
+
+@media(min-width: 770px){
+    #register-info {
+        height: auto; !important;
+        margin-top:
+    }
+}
+
+

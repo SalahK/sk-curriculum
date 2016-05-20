@@ -1,16 +1,16 @@
-var app = angular.module('cv',['ngRoute']);
+var app = angular.module('cv',['ngRoute','ngMaterial']);
 
+// Configuration des routes
 app.config(['$routeProvider', function($routeProvider){
     $routeProvider
-    .when('/',{
+    .when('/formations',{
         templateUrl: 'assets/views/formations.html',
         controller: 'cvCtrl'
     }).
     otherwise({
-        redirectTo: '/'
+        redirectTo: '/formations'
     });
 }]);
-
 
 app.factory("cvFact", function(){
     // Expériences
@@ -75,20 +75,19 @@ app.factory("cvFact", function(){
             lvlDp:['80','60'],
             //test
             css:['lang','fwk','designp','edi']
-        }
+        },
     ];
     
-    // Informations basique
+    // information basique
     var info = [
         {
             name: 'Salah Kounkou',
             mail: 'salah.knk@gmail.com',
             location: 'Toulouse, France',
             birth: '19 / 06 / 1990',
-            loisirs: ['DESSIN','BANDE DESSINNEE','CINEMA','JEUX VIDEO','INFORMATIQUE'],
+            loisirs: ['Dessin','Bande Dessinée','Film / Documentaire','Programmation'],
         }
     ];
-    
     return {
         cvExp : function(){return exp;},
         cvFmt : function(){return fmt;},
@@ -106,7 +105,14 @@ app.controller('cvCtrl', function($scope,cvFact){
     
     $scope.cpt = cvFact.cvCpt();
     console.log(cvFact.cvCpt());
-    
+
+
     $scope.info = cvFact.cvInfo();
     console.log(cvFact.cvInfo());
+    
+    $scope.color = {
+        red: Math.floor(47),
+        green: Math.floor(37),
+        blue: Math.floor(27)
+    };
 });
