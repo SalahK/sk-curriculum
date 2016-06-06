@@ -1,0 +1,67 @@
+a{
+    color: black!important;
+}
+.progress {
+    position: relative;
+	height: 25px;
+}
+.progress > .progress-type {
+	position: absolute;
+	left: 0px;
+	font-weight: 800;
+	padding: 3px 30px 2px 10px;
+	color: rgb(255, 255, 255);
+	background-color: rgba(25, 25, 25, 0.2);
+}
+.progress > .progress-completed {
+	position: absolute;
+	right: 0px;
+	font-weight: 800;
+	color: rgb(39, 255, 0);
+	padding: 3px 10px 2px;
+}
+#contact {
+    background-color: gray;
+    color: white;
+}
+.formation {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    color: #424242;
+}
+.myLi{
+    /*margin-left: 18%;*/
+}
+md-content {
+    padding-left: 2%;
+}
+@media (max-width: 993px){
+    .myLi{
+        margin-left: 0px !important;
+    }
+}
+.hLeft {
+    float: left;
+}
+#myLink {
+    border: 1px solid blue;
+}
+#myLink:hover{
+    border: 2px solid green;
+    background: white!important;
+}
+
+#services {
+    background-color:darkorange;
+}
+
+#about {
+    background-color:white;
+    color:#474747;
+}
+
+@media (min-width: 768px)
+    .navbar-default {
+        border-color: rgba(255,255,255,.6);
+        background-color: rgb(255,255,255) !important;
+}

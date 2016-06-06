@@ -1,145 +1,383 @@
-<!doctype html>
-<html ng-app="cv">
-    <head>
-        <meta charset="utf-8">
-        <title>SK</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
+<!DOCTYPE html>
+<html lang="fr" ng-app="cv">
 
-        <!-- Le styles -->
-        <link href="assets/css/bootstrap.css" rel="stylesheet">
-        <link href="assets/css/main.css" rel="stylesheet">
-        <link href="assets/css/font-style.css" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/register.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link href="assets/css/flexslider.css" rel="stylesheet">
+<head>
 
-        <!-- angular material -->
-        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
-        
-        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CV 2.0">
+    <meta name="author" content="Salah Kounkou">
 
-        <style type="text/css">
-          body {
-            padding-top: 100px;
-          }
-        </style>
-        
-        <script type="text/javascript">
-        $(document).ready(function () {
+    <title>Développeur Web</title>
 
-            $("#btn-blog-next").click(function () {
-              $('#blogCarousel').carousel('next')
-            });
-             $("#btn-blog-prev").click(function () {
-              $('#blogCarousel').carousel('prev')
-            });
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 
-             $("#btn-client-next").click(function () {
-              $('#clientCarousel').carousel('next')
-            });
-             $("#btn-client-prev").click(function () {
-              $('#clientCarousel').carousel('prev')
-            });
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
 
-        });
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+    <!-- angular material -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
 
-         $(window).load(function(){
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 
-            $('.flexslider').flexslider({
-                animation: "slide",
-                slideshow: true,
-                start: function(slider){
-                  $('body').removeClass('loading');
-                }
-            });  
-        });
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-        </script>
-        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+</head>
 
-        <!-- Le fav and touch icons -->
-        <link rel="shortcut icon" href="assets/ico/favicon.ico">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+<body id="page-top" ng-controller="cvCtrl">
 
-        <!-- Google Fonts call. Font Used Open Sans & Raleway -->
-        <link href="http://fonts.googleapis.com/css?family=Raleway:400,300" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-        
-        
-	</head>
-  <body ng-controller="cvCtrl">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Salah Kounkou</a>
+            </div>
 
-  	<!-- NAVIGATION MENU 
-
-    <div class="navbar-nav navbar-inverse navbar-fixed-top">
-        <div class="">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html"><img src="assets/img/ieuc3.png" alt=""> SK curriculum</a>
-        </div> 
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="#formations"><i class="icon-home icon-white"></i> Home</a></li>
-            </ul>
-          </div><!--/.nav-collapse
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#about">Formations</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Expériences</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-    </div> -->
+        <!-- /.container-fluid -->
+    </nav>
 
-    <div>
-        <div id="view" ng-view></div>
-    </div>
+    <header>
+        <div class="header-content row">
+            <div class="header-content-inner col-md-6">
+                <h1 class="section-heading">Developpeur Junior</h1>
+            </div>
+            <div class="col-md-4 col-md-offset-8">
+            </div>
+        </div>
+    </header>
 
-	<div id="footerwrap">
-      	<footer class="clearfix"></footer>
-      	<div class="container">
-      		<div class="row">
-      			<div class="col-sm-12 col-lg-12">
-                <p>Il était une Com...
-      			<a href="http://www.iletaitune.com"><img src="assets/img/ieuc3.png" alt="Il était une com..."></a>
-      			Copyright 2015</p>
-      			</div>
+    <section class="bg-primary" id="about">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading hLeft">Formations</h2>
+            </div>
+        </div>            
+            <div class="row formation">
+                <div ng-repeat="f in fmt" class="myLi col-md-6">
+                    
+                        <md-card class="">
+                            <md-card-title>
+                                <md-card-title-text>
+                                <span class="md-headline">{{f.titre}}</span>
+                                <span class="md-subhead">{{f.date}}</span>
+                                </md-card-title-text>
+                                <md-card-title-media>
+                                <!--<div class="md-media-sm card-media {{f.css}}">
+                                    
+                                </div>-->
+                                <img src="img/portfolio/{{f.css}}.png"/>
+                                </md-card-title-media>
+                            </md-card-title>
+                            <md-content>
+                                <h4>{{f.stitre}}</h4>
+                                <span ng-repeat="desc in f.desc">
+                                    {{desc}}<br>
+                                </span>
+                                <!--
+                                <md-card-actions layout="row" layout-align="end center">
+                                    <md-button>Action 1</md-button>
+                                    <md-button>Action 2</md-button>
+                                </md-card-actions>
+                                -->
+                            </md-content>
+                        </md-card>
+                    
+                </div>
+            </div>
+            
+        <center>
+            <div class="wow bounceIn btn btn-success">
+                    <md-button ng-click="toggle()">Compétences</md-button>
+            </div>
+        </center>
+        </div>
+    </section>
 
-      		</div><!-- /row -->
-      	</div><!-- /container -->		
-	</div><!-- /footerwrap -->
+
+    <aside ng-show="skill" class="bg-dark">
+        <div class="container">
+            <div class="row">    
+                <div  ng-repeat="c in cpt" class="container col-md-12 col-lg-12">
+
+                 <!--///////////////////////////////////// -->
+
+                    <div class="col-md-6 col-lg-6">
+                        <md-card-header>
+                            <md-card-header-text>
+                                <span class="md-title">Languages</span>
+                            </md-card-header-text>
+                        </md-card-header>
+                        <div ng-repeat="cl in c.Languages">         
+                            <div class="progress">
+                                <div class="progress-bar wow slideInLeft" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{c.lvlL[$index]}}%;" data-wow-delay=".2s">
+                                    <span class="sr-only">{{c.lvlL[$index]}}% Complete</span>
+                                </div>
+                                <span class="progress-type">{{cl}}</span>
+                                <span class="progress-completed">{{c.lvlL[$index]}}%</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                 <!--///////////////////////////////////// -->
+
+                    <div class="col-md-6 col-lg-6">
+                        <md-card-header>
+                            <md-card-header-text>
+                                <span class="md-title">Frameworks</span>
+                            </md-card-header-text>
+                        </md-card-header>
+                        <div ng-repeat="cf in c.Frameworks">         
+                            <div class="progress">
+                                <div class="progress-bar wow slideInLeft" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{c.lvlL[$index]}}%;" data-wow-delay=".2s">
+                                    <span class="sr-only">{{c.lvlL[$index]}}% Complete</span>
+                                </div>
+                                <span class="progress-type">{{cf}}</span>
+                                <span class="progress-completed">{{c.lvlL[$index]}}%</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                 <!--///////////////////////////////////// -->
+
+                    <div class="col-md-6 col-lg-6">
+                        <md-card-header>
+                            <md-card-header-text>
+                                <span class="md-title">Environnements de développement</span>
+                            </md-card-header-text>
+                        </md-card-header>
+                        <div ng-repeat="cedi in c.EDI">         
+                            <div class="progress">
+                                <div class="progress-bar wow slideInLeft" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{c.lvlL[$index]}}%;" data-wow-delay=".2s">
+                                    <span class="sr-only">{{c.lvlL[$index]}}% Complete</span>
+                                </div>
+                                <span class="progress-type">{{cedi}}</span>
+                                <span class="progress-completed">{{c.lvlL[$index]}}%</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                 <!--///////////////////////////////////// -->
+
+                    <div class="col-md-6 col-lg-6">
+                        <md-card-header>
+                            <md-card-header-text>
+                                <span class="md-title">Design Pattern</span>
+                            </md-card-header-text>
+                        </md-card-header>
+                        <div ng-repeat="cdp in c.DesignPattern">         
+                            <div class="progress">
+                                <div class="progress-bar wow slideInLeft" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{c.lvlL[$index]}}%;" data-wow-delay=".2s">
+                                    <span class="sr-only">{{c.lvlL[$index]}}% Complete</span>
+                                </div>
+                                <span class="progress-type">{{cdp}}</span>
+                                <span class="progress-completed">{{c.lvlL[$index]}}%</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                 <!--///////////////////////////////////// -->
+
+                    <div class="col-md-6 col-lg-6">
+                        <md-card-header>
+                            <md-card-header-text>
+                                <span class="md-title">Gestion de Projet</span>
+                            </md-card-header-text>
+                        </md-card-header>
+                        <div ng-repeat="gdp in c.GDP">         
+                            <div class="progress">
+                                <div class="progress-bar wow slideInLeft" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{c.lvlGdp[$index]}}%;" data-wow-delay=".2s">
+                                    <span class="sr-only">{{c.lvlGdp[$index]}}% Complete</span>
+                                </div>
+                                <span class="progress-type">{{gdp}}</span>
+                                <span class="progress-completed">{{c.lvlGdp[$index]}}%</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <section id="services">
+        <div class="no-padding">
+        <div class="container">         
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading hLeft">Expériences</h2>
+            </div>
+        </div>
+            <div ng-repeat="xp in exp" class="row col-md-4 col-lg-4">
+                <md-card class="wow fadeIn">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-title">{{xp.titre}}</span>
+                            <span class="md-subhead">{{xp.date}}</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-content>
+                        <ul>
+                            <li ng-repeat="d in xp.desc">{{d}}
+                            <md-button id="myLink" ng-repeat="l in xp.folio | filter: xp.folio[$index] == maquettes">
+                                <a class="md-primary" ng-click="toggleC(l)">{{l}}</a><br>
+                            </md-button>
+                            </li>
+                        </ul>
+                        <md-card-actions class="wow bounceIn" ng-repeat="l in xp.lien" layout="row" layout-align="end center">
+                        <md-button id="myLink">
+                            <a href="www.{{l}}">{{l}}</a><br>
+                        </md-button>
+                        </md-card-actions>
+                    </md-content>
+                </md-card>
+            </div>
+        </div>
+    </section>
 
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/bootstrap.js"></script>
+    <section class="container no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+        <div ng-repeat="r in real">
+           
+            <div ng-show="maquette" ng-repeat="crea in r.maquettes">
+                <div class="col-xs-6 col-md-4 portfolio-box">
+                    <div id="sizeImg" class="portfolio-box">
+                        <img src="img/portfolio/{{crea}}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    {{crea}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div ng-show="carte" ng-repeat="crea in r.carte">
+                <div class="col-xs-6 col-md-4 portfolio-box">
+                    <div id="sizeImg" class="portfolio-box">
+                        <img src="img/portfolio/{{crea}}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    {{crea}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div ng-show="fly" ng-repeat="crea in r.fly">
+                <div class="col-xs-6 col-md-4 portfolio-box">
+                    <div id="sizeImg" class="portfolio-box">
+                        <img src="img/portfolio/{{crea}}" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    {{crea}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+        </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- custom javascript -->
+        <div id="contact">
+            <div class="container row">
+                <div class="col-md-4 col-lg-4 text-center">
+                    <h2 class="section-heading hLeft">Contact</h2>
+                </div>
+                <div class="col-md-4 col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s">
+                    <p><a href="mailto:{{info.mail}}">{{info.mail}}</a></p>                    
+                    </i>
+                    <i class="fa fa-linkedin fa-3x wow bounceIn" data-wow-delay=".1s">
+                    <p><a href="https://www.linkedin.com/in/salah-kounkou-343266b9">{{info.name}}
+                    </a></p>                   
+                    </i>
+                </div>
+            </div>
+        </div>
 
-	<script src="assets/js/jquery.flexslider.js" type="text/javascript"></script>
-      
-    <!-- angular lib -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- Angular Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
-
-    <!-- Angular Material Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-sanitize.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>  
 
-
- 
     <!-- //////////// -->
-    <!-- my app -->
-    <script src="assets/js/app.js"></script>
+    
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
 
-  
-</body></html>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+    
+    <!-- my app -->
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
