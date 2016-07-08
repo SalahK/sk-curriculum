@@ -137,7 +137,27 @@ app.controller('cvCtrl', function($scope,cvFact){
     // Permet d'afficher les réalisations
     $scope.real = cvFact.cvCrea();
     console.log(cvFact.cvCrea());
-    
+
+    $scope.adress = "";
+    $scope.subject = "";
+    $scope.body = "";
+    $scope.send = function sendMail()
+                {
+                    console.log($scope.adress+" "+
+                        $scope.subject+" "+
+                        $scope.body);
+                    if(($scope.adress && 
+                        $scope.subject && 
+                        $scope.body) != (undefined || "")){
+                        var link = "mailto:salah@gmail.com"+
+                                    "?cc=CC"+$scope.adress+
+                                    "&subject=" + escape($scope.subject)+
+                                    "&body=" + escape($scope.body);
+                        window.location.href = link;
+                    }
+                };
+
+    //** FOLIO TBD **\\
     // Bouttons réalisations
     $scope.fly = false;
     $scope.maquette = false;
