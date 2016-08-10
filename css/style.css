@@ -57,13 +57,6 @@ md-content {
     float: left;
     color: white;
 }
-#myLink {
-    border: 1px solid blue;
-}
-#myLink:hover{
-    border: 2px solid green;
-    /*background: white!important;*/
-}
 
 @media (min-width: 768px)
     .navbar-default {
@@ -117,6 +110,20 @@ aside .md-title{
 }
 #contact{
     background-color: white !important;
+}
+
+.myBtn{
+    padding: 10px;
+    border: 1px solid blue;
+    border-radius: 2px;
+    font-style: italic;
+}
+
+/* boutons exp */
+.myBtn:hover{
+    border: 1px solid green;
+    border-radius: 2px;
+    background-color: lightgreen;
 }
 
 /** MEDIA QUERIES **/
